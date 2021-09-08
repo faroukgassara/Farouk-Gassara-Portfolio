@@ -81,7 +81,7 @@ Widget _buildUi(double width, BuildContext context) {
                                       width: 25.0,
                                     ),
                                     SizedBox(
-                                      width: 15.0,
+                                      width: 10.0,
                                     ),
                                     Text(
                                       footerItem.title,
@@ -94,7 +94,7 @@ Widget _buildUi(double width, BuildContext context) {
                                   ],
                                 ),
                                 SizedBox(
-                                  height: 15.0,
+                                  height: 10.0,
                                 ),
                                 RichText(
                                   textAlign: TextAlign.start,
@@ -104,13 +104,14 @@ Widget _buildUi(double width, BuildContext context) {
                                         text: "${footerItem.text1}\n",
                                         style: TextStyle(
                                           color: kCaptionColor,
-                                          height: 1.8,
+                                          fontSize: 13.0,
                                         ),
                                       ),
                                       TextSpan(
                                         text: "${footerItem.text2}\n",
                                         style: TextStyle(
                                           color: kCaptionColor,
+                                          fontSize: 13.0,
                                         ),
                                       )
                                     ],
