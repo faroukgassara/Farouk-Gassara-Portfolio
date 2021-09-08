@@ -55,7 +55,7 @@ class SkillSection extends StatelessWidget {
                 Expanded(
                   flex: ScreenHelper.isMobile(context) ? 0 : 2,
                   child: Image.asset(
-                    "assets/person.jpg",
+                    "assets/person.png",
                     width: 300.0,
                   ),
                 ),
@@ -78,18 +78,7 @@ class SkillSection extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 10.0,
-                      ),
-                      Text(
-                        "This is all the skills listed below more will be added in due time. This is all the skills listed below more will be added in due time.",
-                        style: TextStyle(
-                          color: kCaptionColor,
-                          height: 1.5,
-                          fontSize: 16.0,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 15.0,
+                        height: 30.0,
                       ),
                       Column(
                         children: skills

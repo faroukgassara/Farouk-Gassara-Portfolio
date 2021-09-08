@@ -10,26 +10,26 @@ final List<FooterItem> footerItems = [
   FooterItem(
     iconPath: "assets/mappin.png",
     title: "ADDRESS",
-    text1: "999 Carter Street",
-    text2: "Sailor Springs, IL 64234",
+    text1: "Route Gremda km 1.5, Sfax",
+    text2: "Cité El Ghazala, Ariana",
   ),
   FooterItem(
     iconPath: "assets/phone.png",
     title: "PHONE",
-    text1: "+1 618-689-9604",
-    text2: "+1 781-689-9632",
+    text1: "+216 44561686",
+    text2: "",
   ),
   FooterItem(
-    iconPath: "assets/email.png",
+    iconPath: "assets/email1.png",
     title: "EMAIL",
-    text1: "hello@example.com",
-    text2: "info@flutterpanda.com",
+    text1: "faroukgasaraa@gmail.com",
+    text2: "farouk.gassara@esprit.tn",
   ),
   FooterItem(
     iconPath: "assets/whatsapp.png",
     title: "WHATSAPP",
-    text1: "+234 901-134-0095",
-    text2: "+234 901-134-0095",
+    text1: "+216 44561686",
+    text2: "",
   )
 ];
 
@@ -138,7 +138,7 @@ Widget _buildUi(double width, BuildContext context) {
                   Padding(
                     padding: EdgeInsets.only(bottom: 8.0),
                     child: Text(
-                      "Copyright (c) 2021 Michele Harrington. All rights Reserved",
+                      "Copyright (c) 2021 Farouk Gassara. All Rights Reserved",
                       style: TextStyle(
                         color: kCaptionColor,
                       ),
@@ -152,7 +152,7 @@ Widget _buildUi(double width, BuildContext context) {
                         child: MouseRegion(
                           cursor: SystemMouseCursors.click,
                           child: Text(
-                            "Privacy Policy",
+                            "",
                             style: TextStyle(
                               color: kCaptionColor,
                             ),
@@ -162,7 +162,7 @@ Widget _buildUi(double width, BuildContext context) {
                       Container(
                         padding: EdgeInsets.symmetric(horizontal: 8.0),
                         child: Text(
-                          "|",
+                          "",
                           style: TextStyle(
                             color: kCaptionColor,
                           ),
@@ -173,7 +173,7 @@ Widget _buildUi(double width, BuildContext context) {
                         child: MouseRegion(
                           cursor: SystemMouseCursors.click,
                           child: Text(
-                            "Terms & Conditions",
+                            "",
                             style: TextStyle(
                               color: kCaptionColor,
                             ),

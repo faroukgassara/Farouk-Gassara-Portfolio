@@ -8,26 +8,27 @@ import 'package:responsive_framework/responsive_framework.dart';
 
 final List<DesignProcess> designProcesses = [
   DesignProcess(
-    title: "Kent Beck",
-    imagePath: "assets/kentbeck.jpg",
-    subtitle: "“Make it work, make it right, make it fast.”",
-  ),
-  DesignProcess(
-    title: "Alan J. Perlis",
-    imagePath: "assets/alanperlis.jpeg",
+    title: "DESIGN",
+    imagePath: "assets/design.png",
     subtitle:
-        "“A language that doesn't affect the way you think about programming is not worth knowing.”",
+        "“Everything is designed. Few things are designed well. Make it simple, but significant.”",
   ),
   DesignProcess(
-    title: "Linus Torvalds",
-    imagePath: "assets/linustorvalds.jpg",
-    subtitle: "“Talk is cheap,Show me the code.”",
-  ),
-  DesignProcess(
-    title: "Steve Jobs",
-    imagePath: "assets/stevejobs.jpg",
+    title: "DEVELOP",
+    imagePath: "assets/develop.png",
     subtitle:
-        "“Everyone in this country should learn how to program because it teaches you how to think”",
+        "“Learning to code is useful no matter what your career ambitions are.”",
+  ),
+  DesignProcess(
+    title: "Write",
+    imagePath: "assets/write.png",
+    subtitle:
+        "“Learning to write programs stretches your mind, and helps you think better, creates a way of thinking about things that I think is helpful in all domains.”",
+  ),
+  DesignProcess(
+    title: "DEBUG",
+    imagePath: "assets/promote.png",
+    subtitle: "“Fix the cause, not the symptom.”",
   ),
 ];
 
@@ -71,7 +72,7 @@ class CvSection extends StatelessWidget {
                   child: Text(
                     "DOWNLOAD CV",
                     style: GoogleFonts.oswald(
-                      color: kCaptionColor,
+                      color: kPrimaryColor,
                       fontWeight: FontWeight.w900,
                       fontSize: 16.0,
                     ),
@@ -133,7 +134,7 @@ class CvSection extends StatelessWidget {
                           Text(
                             designProcesses[index].subtitle,
                             style: TextStyle(
-                              color: Colors.white,
+                              color: kCaptionColor,
                               height: 1.5,
                               fontSize: 14.0,
                             ),

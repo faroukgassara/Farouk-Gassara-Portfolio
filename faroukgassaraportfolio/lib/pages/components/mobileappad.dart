@@ -33,7 +33,7 @@ class MobileAppAd extends StatelessWidget {
                   Expanded(
                     flex: constraints.maxWidth > 720.0 ? 1 : 0,
                     child: Image.asset(
-                      "assets/person.jpg",
+                      "assets/mobile.png",
                       width: constraints.maxWidth > 720.0 ? null : 350.0,
                     ),
                   ),
@@ -44,7 +44,7 @@ class MobileAppAd extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Mobile APP",
+                          "Mobile Applications",
                           style: GoogleFonts.oswald(
                             color: kCaptionColor,
                             fontWeight: FontWeight.w900,
@@ -55,7 +55,7 @@ class MobileAppAd extends StatelessWidget {
                           height: 15.0,
                         ),
                         Text(
-                          "UNIVERSAL\nSMART HOME APP",
+                          "CUSTOM MOBILE\nAPPLICATIONS",
                           style: GoogleFonts.oswald(
                             color: Colors.white,
                             fontWeight: FontWeight.w900,
@@ -67,7 +67,7 @@ class MobileAppAd extends StatelessWidget {
                           height: 10.0,
                         ),
                         Text(
-                          "This is a random text about the project, I should have used the regular lorem ipsum text, but I am too lazy to search for that. This should be long enough",
+                          "Native or hybrid, for Android or IOS, a mobile application based on the latest technologies represent a real asset for your business. Different in its purpose from web applications, the mobile application is a base of your strategic development. With his scalable approach and thanks to its advanced functionalities, it presents a wildcard to develop your business, better understand and target your market.",
                           style: TextStyle(
                             color: kCaptionColor,
                             height: 1.5,
@@ -108,32 +108,6 @@ class MobileAppAd extends StatelessWidget {
                             SizedBox(
                               width: 10.0,
                             ),
-                            MouseRegion(
-                              cursor: SystemMouseCursors.click,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(8.0),
-                                  border: Border.all(
-                                    color: kPrimaryColor,
-                                  ),
-                                ),
-                                height: 48.0,
-                                padding: EdgeInsets.symmetric(horizontal: 28.0),
-                                child: TextButton(
-                                  onPressed: () {},
-                                  child: Center(
-                                    child: Text(
-                                      "NEXT APP",
-                                      style: TextStyle(
-                                        color: kPrimaryColor,
-                                        fontSize: 13.0,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            )
                           ],
                         )
                       ],

@@ -7,18 +7,30 @@ import 'package:responsive_framework/responsive_framework.dart';
 
 final List<Testimonial> testimonials = [
   Testimonial(
-    text:
-        "This is a testimonial text from Janny Stone. Michele is a professional at what he does and never ceases to amaze me with his beautiful works. I will like to work with him in the future again.",
-    occupation: "Product Designer",
-    personName: "JANNY STONE",
-    profilePhoto: "assets/female.png",
+    text: "“Make it work, make it right, make it fast.”",
+    occupation: "Programmer",
+    personName: "Kent Beck",
+    profilePhoto: "assets/kentbeck.jpg",
+  ),
+  Testimonial(
+    text: "“Talk is cheap,Show me the code.”",
+    occupation: "Software Engineer",
+    personName: "Linus Torvalds",
+    profilePhoto: "assets/linustorvalds.jpg",
   ),
   Testimonial(
     text:
-        "This is a testimonial text from Ken Williams. Michele is a professional at what he does and never ceases to amaze me with his beautiful works. I will like to work with him in the future again.",
-    occupation: "Art Director",
-    personName: "KEN WILLIAMS",
-    profilePhoto: "assets/male.png",
+        "“Everyone in this country should learn how to program because it teaches you how to think”",
+    occupation: "Entrepreneur",
+    personName: "Steve Jobs",
+    profilePhoto: "assets/stevejobs.jpg",
+  ),
+  Testimonial(
+    text:
+        "“A language that doesn't affect the way you think about programming is not worth knowing.”",
+    occupation: "University Professor",
+    personName: "Alan J. Perlis",
+    profilePhoto: "assets/alanperlis.jpeg",
   )
 ];
 
@@ -47,7 +59,7 @@ Widget _buildUi(double width) {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "TESTIMONIALS",
+                "QUOTES",
                 style: GoogleFonts.oswald(
                   color: Colors.white,
                   fontWeight: FontWeight.w900,
@@ -56,35 +68,7 @@ Widget _buildUi(double width) {
                 ),
               ),
               SizedBox(
-                height: 5.0,
-              ),
-              Container(
-                constraints: BoxConstraints(maxWidth: 400.0),
-                child: RichText(
-                  text: TextSpan(
-                    children: [
-                      TextSpan(
-                        text:
-                            "This is the portfolio section. There is alot of work here",
-                        style: TextStyle(color: Colors.white, height: 1.8),
-                      ),
-                      TextSpan(
-                          text: " click here to contact us",
-                          style: TextStyle(
-                            color: kPrimaryColor,
-                            fontWeight: FontWeight.w700,
-                            height: 1.8,
-                          )),
-                      TextSpan(
-                        text: ". Please subscribe to me youtube channel :-)",
-                        style: TextStyle(color: Colors.white, height: 1.8),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 45.0,
+                height: 50.0,
               ),
               Flex(
                 direction: ScreenHelper.isMobile(context)

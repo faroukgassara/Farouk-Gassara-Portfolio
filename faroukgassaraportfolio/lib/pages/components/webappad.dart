@@ -30,7 +30,6 @@ class WebAppAd extends StatelessWidget {
                     ? Axis.horizontal
                     : Axis.vertical,
                 children: [
-                  // Disable expanded on smaller screen to avoid Render errors by setting flex to 0
                   Expanded(
                     flex: constraints.maxWidth > 720.0 ? 1 : 0,
                     child: Column(
@@ -49,7 +48,7 @@ class WebAppAd extends StatelessWidget {
                           height: 15.0,
                         ),
                         Text(
-                          "EVOLVING NAGA\nRESORT WEBSITE",
+                          "CUSTOM WEBSITE\nDEVELOPMENT",
                           style: GoogleFonts.oswald(
                             color: Colors.white,
                             fontWeight: FontWeight.w900,
@@ -61,7 +60,7 @@ class WebAppAd extends StatelessWidget {
                           height: 10.0,
                         ),
                         Text(
-                          "This is a random text about the project, I should have used the regular lorem ipsum text, but I am too lazy to search for that. This should be long enough",
+                          "An attractive website, meeting the requirements of your business and offering an optimized user experience. Thanks to the latest technologies, your website, dynamic in its content, will provide you with the best performance.",
                           style: TextStyle(
                             color: kCaptionColor,
                             height: 1.5,
@@ -102,32 +101,6 @@ class WebAppAd extends StatelessWidget {
                             SizedBox(
                               width: 10.0,
                             ),
-                            MouseRegion(
-                              cursor: SystemMouseCursors.click,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(8.0),
-                                  border: Border.all(
-                                    color: kPrimaryColor,
-                                  ),
-                                ),
-                                height: 48.0,
-                                padding: EdgeInsets.symmetric(horizontal: 28.0),
-                                child: TextButton(
-                                  onPressed: () {},
-                                  child: Center(
-                                    child: Text(
-                                      "NEXT APP",
-                                      style: TextStyle(
-                                        color: kPrimaryColor,
-                                        fontSize: 13.0,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            )
                           ],
                         ),
                         SizedBox(
@@ -142,7 +115,7 @@ class WebAppAd extends StatelessWidget {
                   Expanded(
                     flex: constraints.maxWidth > 720.0 ? 1 : 0,
                     child: Image.asset(
-                      "assets/person.jpg",
+                      "assets/laptop.png",
                       width: constraints.maxWidth > 720.0 ? null : 350.0,
                     ),
                   ),

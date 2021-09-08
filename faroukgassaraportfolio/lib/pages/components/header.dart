@@ -47,7 +47,7 @@ class HeaderLogo extends StatelessWidget {
                 TextSpan(
                   text: ".",
                   style: GoogleFonts.oswald(
-                    color: kCaptionColor,
+                    color: kPrimaryColor,
                     fontSize: 36.0,
                     fontWeight: FontWeight.bold,
                   ),

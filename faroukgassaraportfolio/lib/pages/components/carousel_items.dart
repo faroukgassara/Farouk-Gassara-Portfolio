@@ -14,11 +14,11 @@ List<CarouselItemModel> carouselItems = List.generate(
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            "PRODUCT DESIGNER",
-            style: GoogleFonts.oswald(
+            "Hello, i'm",
+            style: TextStyle(
               color: kCaptionColor,
-              fontWeight: FontWeight.w900,
-              fontSize: 16.0,
+              fontSize: 15.0,
+              height: 1.0,
             ),
           ),
           SizedBox(
@@ -37,43 +37,15 @@ List<CarouselItemModel> carouselItems = List.generate(
             height: 10.0,
           ),
           Text(
-            "Full-stack developer, based in Barcelona",
+            "Software Engineer Student",
             style: TextStyle(
-              color: Colors.white,
+              color: kCaptionColor,
               fontSize: 15.0,
               height: 1.0,
             ),
           ),
           SizedBox(
             height: 10.0,
-          ),
-          Container(
-            child: Wrap(
-              children: [
-                Text(
-                  "Need a full custom website?",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15.0,
-                    height: 1.5,
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () {},
-                  child: MouseRegion(
-                    cursor: SystemMouseCursors.click,
-                    child: Text(
-                      " Got a project? Let's talk.",
-                      style: TextStyle(
-                        height: 1.5,
-                        color: Colors.white,
-                        fontSize: 15.0,
-                      ),
-                    ),
-                  ),
-                )
-              ],
-            ),
           ),
           SizedBox(
             height: 25.0,
@@ -82,7 +54,7 @@ List<CarouselItemModel> carouselItems = List.generate(
             cursor: SystemMouseCursors.click,
             child: Container(
               decoration: BoxDecoration(
-                color: kCaptionColor,
+                color: kPrimaryColor,
                 borderRadius: BorderRadius.circular(8.0),
               ),
               height: 48.0,
@@ -107,7 +79,7 @@ List<CarouselItemModel> carouselItems = List.generate(
     ),
     image: Container(
       child: Image.asset(
-        "assets/person.jpg",
+        "assets/person.png",
         fit: BoxFit.contain,
       ),
     ),
