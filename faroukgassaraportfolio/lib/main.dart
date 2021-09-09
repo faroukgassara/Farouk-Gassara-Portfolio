@@ -1,4 +1,7 @@
+import 'package:faroukgassaraportfolio/pages/components/carousel.dart';
+import 'package:faroukgassaraportfolio/pages/components/footer.dart';
 import 'package:faroukgassaraportfolio/pages/home.dart';
+import 'package:faroukgassaraportfolio/pages/login.dart';
 import 'package:faroukgassaraportfolio/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';

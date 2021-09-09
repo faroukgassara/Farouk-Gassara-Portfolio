@@ -1,4 +1,5 @@
 import 'package:faroukgassaraportfolio/models/header_item.dart';
+import 'package:faroukgassaraportfolio/pages/login.dart';
 import 'package:faroukgassaraportfolio/utils/constants.dart';
 import 'package:faroukgassaraportfolio/utils/globals.dart';
 import 'package:faroukgassaraportfolio/utils/screen_helper.dart';
@@ -32,7 +33,12 @@ class HeaderLogo extends StatelessWidget {
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
         child: GestureDetector(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Login()),
+            );
+          },
           child: RichText(
             text: TextSpan(
               children: [
