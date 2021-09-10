@@ -1,10 +1,16 @@
+import 'dart:convert';
+
 import 'package:email_validator/email_validator.dart';
+import 'package:faroukgassaraportfolio/main.dart';
+import 'package:faroukgassaraportfolio/pages/home.dart';
 import 'package:faroukgassaraportfolio/utils/constants.dart';
 import 'package:faroukgassaraportfolio/utils/screen_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import 'package:http/http.dart' as http;
+import 'package:flutter/foundation.dart';
 
 class Login extends StatefulWidget {
   const Login({Key key}) : super(key: key);
@@ -15,6 +21,36 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
   final _formKey = GlobalKey<FormState>();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _mdpConttoller = TextEditingController();
+
+  Future<String> attemptLogIn(String email, String mdp) async {
+    final response = await http.post(
+      Uri.parse('http://localhost:3000/login'),
+      headers: <String, String>{
+        'Content-Type': 'application/json; charset=UTF-8',
+      },
+      body: jsonEncode(<String, String>{"email": email, "mdp": mdp}),
+    );
+    if (response.statusCode == 401) {
+      displayDialog(context, "An Error Occurred",
+          "No account was found matching that username and password");
+      return null;
+    } else {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => Home()),
+      );
+    }
+  }
+
+  void displayDialog(BuildContext context, String title, String text) =>
+      showDialog(
+        context: context,
+        builder: (context) =>
+            AlertDialog(title: Text(title), content: Text(text)),
+      );
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -90,6 +126,7 @@ class _LoginState extends State<Login> {
                     Container(
                       width: width - 70,
                       child: TextFormField(
+                        controller: _emailController,
                         validator: (value) {
                           if (!EmailValidator.validate(value)) {
                             return 'Please enter some text';
@@ -109,6 +146,7 @@ class _LoginState extends State<Login> {
                     Container(
                       width: width - 70,
                       child: TextFormField(
+                        controller: _mdpConttoller,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
                             return 'Please enter some text';
@@ -143,6 +181,10 @@ class _LoginState extends State<Login> {
                     GestureDetector(
                       onTap: () {
                         if (_formKey.currentState.validate()) {
+                          var email = _emailController.text;
+                          var mdp = _mdpConttoller.text;
+
+                          attemptLogIn(email, mdp);
                         } else {
                           ScaffoldMessenger.of(context).showSnackBar(
                             const SnackBar(content: Text('Processing Data')),

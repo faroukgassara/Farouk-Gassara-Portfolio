@@ -6,7 +6,10 @@ import 'package:faroukgassaraportfolio/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
+const SERVER_IP = 'http://localhost:3000';
+final storage = FlutterSecureStorage();
 void main() {
   runApp(MyApp());
 }
