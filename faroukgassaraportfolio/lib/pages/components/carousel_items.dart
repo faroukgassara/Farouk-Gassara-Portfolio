@@ -27,7 +27,7 @@ List<CarouselItemModel> carouselItems = List.generate(
             height: 18.0,
           ),
           Text(
-            "FAROUK\nGASSARA",
+            "FAROUK GASSARA",
             style: GoogleFonts.oswald(
               color: Colors.white,
               fontSize: 40.0,
@@ -39,7 +39,7 @@ List<CarouselItemModel> carouselItems = List.generate(
             height: 10.0,
           ),
           Text(
-            "Software Engineer Student",
+            "Software Architecture Engineering Student at ESPRIT \nI graduated from the Manouba Institute of IT and multimedia(ISAMM) in 2020 with a Licence Degree in Software Development. I am an accomplished coder and programmer, my story of passion for coding and programming began a long time ago when I was playing video games and asking how did they build them, that pushed me to search and learn more about programming and it become my passion, I had fun when I could fix bugs, It taught me a lot of patience. ",
             style: TextStyle(
               color: kCaptionColor,
               fontSize: 15.0,

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 final List<DesignProcess> designProcesses = [
   DesignProcess(
@@ -53,6 +54,37 @@ class CvSection extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "BETTER DESIGN,\nBETTER EXPERIENCES",
+                style: GoogleFonts.oswald(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w900,
+                  height: 1.8,
+                  fontSize: 18.0,
+                ),
+              ),
+              GestureDetector(
+                onTap: _launchURLlin,
+                child: MouseRegion(
+                  cursor: SystemMouseCursors.click,
+                  child: Text(
+                    "DOWNLOAD CV",
+                    style: GoogleFonts.oswald(
+                      color: kPrimaryColor,
+                      fontWeight: FontWeight.w900,
+                      fontSize: 16.0,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: 50.0,
+          ),
           Container(
             child: LayoutBuilder(
               builder: (_context, constraints) {
@@ -120,5 +152,15 @@ class CvSection extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+_launchURLlin() async {
+  const url =
+      'https://drive.google.com/file/d/1Csil1Qx-8-junNjBjIz2Jw4j8a7eTrYg/view?usp=sharing';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
   }
 }
