@@ -4,7 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
-class MobileAppAd extends StatelessWidget {
+class FormationI extends StatefulWidget {
+  const FormationI({Key key}) : super(key: key);
+
+  @override
+  _FormationIState createState() => _FormationIState();
+}
+
+class _FormationIState extends State<FormationI> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -32,19 +39,12 @@ class MobileAppAd extends StatelessWidget {
                 children: [
                   Expanded(
                     flex: constraints.maxWidth > 720.0 ? 1 : 0,
-                    child: Image.asset(
-                      "assets/mobile.png",
-                      width: constraints.maxWidth > 720.0 ? null : 350.0,
-                    ),
-                  ),
-                  Expanded(
-                    flex: constraints.maxWidth > 720.0 ? 1 : 0,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Mobile Applications",
+                          "TEDxUniversityofManouba",
                           style: GoogleFonts.oswald(
                             color: kCaptionColor,
                             fontWeight: FontWeight.w900,
@@ -52,31 +52,30 @@ class MobileAppAd extends StatelessWidget {
                           ),
                         ),
                         SizedBox(
-                          height: 15.0,
-                        ),
-                        Text(
-                          "CUSTOM MOBILE\nAPPLICATIONS",
-                          style: GoogleFonts.oswald(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w900,
-                            height: 1.3,
-                            fontSize: 35.0,
-                          ),
-                        ),
-                        SizedBox(
                           height: 10.0,
                         ),
                         Text(
-                          "Native or hybrid, for Android or IOS, a mobile application based on the latest technologies represent a real asset for your business. Different in its purpose from web applications, the mobile application is a base of your strategic development. With his scalable approach and thanks to its advanced functionalities, it presents a wildcard to develop your business, better understand and target your market.",
+                          "I was one of the participants in TEDxUniversityofManouba first edition it was such a magical day",
                           style: TextStyle(
                             color: kCaptionColor,
                             height: 1.5,
-                            fontSize: 15.0,
+                            fontSize: 13.0,
                           ),
                         ),
                       ],
                     ),
-                  )
+                  ),
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  Expanded(
+                    flex: constraints.maxWidth > 720.0 ? 1 : 0,
+                    child: Image.asset(
+                      "assets/tedx.jpg",
+                      width: constraints.maxWidth > 720.0 ? null : 350.0,
+                      height: 400.0,
+                    ),
+                  ),
                 ],
               ),
             ),

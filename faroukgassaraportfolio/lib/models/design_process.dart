@@ -6,8 +6,8 @@ class DesignProcess {
   final String subtitle;
 
   DesignProcess({
-    @required this.title,
+    this.title,
     @required this.imagePath,
-    @required this.subtitle,
+    this.subtitle,
   });
 }

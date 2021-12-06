@@ -1,10 +1,12 @@
 import 'package:faroukgassaraportfolio/pages/components/carousel.dart';
 import 'package:faroukgassaraportfolio/pages/components/footer.dart';
+import 'package:faroukgassaraportfolio/pages/components/menu_controller.dart';
 import 'package:faroukgassaraportfolio/pages/home.dart';
-import 'package:faroukgassaraportfolio/pages/login.dart';
+import 'package:faroukgassaraportfolio/test/home.dart';
 import 'package:faroukgassaraportfolio/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.dark,
       darkTheme: Theme.of(context).copyWith(
-        platform: TargetPlatform.android,
+        platform: TargetPlatform.iOS,
         scaffoldBackgroundColor: kBackGroundColor,
         primaryColor: kPrimaryColor,
         canvasColor: kBackGroundColor,
@@ -42,7 +44,12 @@ class MyApp extends StatelessWidget {
           color: kBackGroundColor,
         ),
       ),
-      home: Home(),
+      home: MultiProvider(
+        providers: [
+          ChangeNotifierProvider(create: (context) => MenuController()),
+        ],
+        child: Home(),
+      ),
     );
   }
 }

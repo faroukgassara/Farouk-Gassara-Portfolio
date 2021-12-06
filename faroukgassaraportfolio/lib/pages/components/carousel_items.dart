@@ -3,6 +3,8 @@ import 'package:faroukgassaraportfolio/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 List<CarouselItemModel> carouselItems = List.generate(
   5,
@@ -14,7 +16,7 @@ List<CarouselItemModel> carouselItems = List.generate(
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            "Hello, i'm",
+            "Hello World, My name is",
             style: TextStyle(
               color: kCaptionColor,
               fontSize: 15.0,
@@ -47,33 +49,37 @@ List<CarouselItemModel> carouselItems = List.generate(
           SizedBox(
             height: 10.0,
           ),
-          SizedBox(
-            height: 25.0,
-          ),
-          MouseRegion(
-            cursor: SystemMouseCursors.click,
-            child: Container(
-              decoration: BoxDecoration(
-                color: kPrimaryColor,
-                borderRadius: BorderRadius.circular(8.0),
-              ),
-              height: 48.0,
-              padding: EdgeInsets.symmetric(
-                horizontal: 28.0,
-              ),
-              child: TextButton(
-                onPressed: () {},
-                child: Text(
-                  "GET STARTED",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 13.0,
-                    fontWeight: FontWeight.bold,
-                  ),
+          Container(
+            child: Row(
+              children: [
+                IconButton(
+                  color: Colors.white,
+                  icon: FaIcon(FontAwesomeIcons.linkedin),
+                  onPressed: _launchURLlin,
                 ),
-              ),
+                IconButton(
+                  color: Colors.white,
+                  icon: FaIcon(FontAwesomeIcons.facebook),
+                  onPressed: _launchURLfb,
+                ),
+                IconButton(
+                  color: Colors.white,
+                  icon: FaIcon(FontAwesomeIcons.instagram),
+                  onPressed: _launchURLin,
+                ),
+                IconButton(
+                  color: Colors.white,
+                  icon: FaIcon(FontAwesomeIcons.github),
+                  onPressed: _launchgit1,
+                ),
+                IconButton(
+                  color: Colors.white,
+                  icon: FaIcon(FontAwesomeIcons.github),
+                  onPressed: _launchgit2,
+                ),
+              ],
             ),
-          )
+          ),
         ],
       ),
     ),
@@ -85,3 +91,47 @@ List<CarouselItemModel> carouselItems = List.generate(
     ),
   ),
 );
+_launchURLlin() async {
+  const url = 'https://tn.linkedin.com/in/farouk-gassara-588035149/';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+_launchURLfb() async {
+  const url = 'https://www.facebook.com/FaroukGassaraa/';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+_launchURLin() async {
+  const url = 'https://www.instagram.com/faroukgassaraa/';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+_launchgit1() async {
+  const url = 'https://github.com/faroukgassara/';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+_launchgit2() async {
+  const url = 'https://github.com/faroukgasara/';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}

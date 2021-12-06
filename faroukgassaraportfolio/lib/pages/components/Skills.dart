@@ -8,31 +8,44 @@ import 'package:responsive_framework/responsive_framework.dart';
 
 final List<DesignProcess> designProcesses = [
   DesignProcess(
-    title: "DESIGN",
-    imagePath: "assets/design.png",
-    subtitle:
-        "“Everything is designed. Few things are designed well. Make it simple, but significant.”",
+    imagePath: "assets/html.png",
   ),
   DesignProcess(
-    title: "DEVELOP",
-    imagePath: "assets/develop.png",
-    subtitle:
-        "“Learning to code is useful no matter what your career ambitions are.”",
+    imagePath: "assets/java.png",
   ),
   DesignProcess(
-    title: "Write",
-    imagePath: "assets/write.png",
-    subtitle:
-        "“Learning to write programs stretches your mind, and helps you think better, creates a way of thinking about things that I think is helpful in all domains.”",
+    imagePath: "assets/javascript.png",
   ),
   DesignProcess(
-    title: "DEBUG",
-    imagePath: "assets/promote.png",
-    subtitle: "“Fix the cause, not the symptom.”",
+    imagePath: "assets/angular.png",
+  ),
+  DesignProcess(
+    imagePath: "assets/Csharp.png",
+  ),
+  DesignProcess(
+    imagePath: "assets/mongodb.png",
+  ),
+  DesignProcess(
+    imagePath: "assets/nodejs.png",
+  ),
+  DesignProcess(
+    imagePath: "assets/flutter.png",
+  ),
+  DesignProcess(
+    imagePath: "assets/react.png",
+  ),
+  DesignProcess(
+    imagePath: "assets/sqlserver.png",
+  ),
+  DesignProcess(
+    imagePath: "assets/symfony.png",
+  ),
+  DesignProcess(
+    imagePath: "assets/spring.png",
   ),
 ];
 
-class CvSection extends StatelessWidget {
+class Skills extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -53,24 +66,34 @@ class CvSection extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "SKILLS",
+                style: GoogleFonts.oswald(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w900,
+                  fontSize: 30.0,
+                  height: 1.3,
+                ),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: 50.0,
+          ),
           Container(
             child: LayoutBuilder(
               builder: (_context, constraints) {
                 return ResponsiveGridView.builder(
-                  padding: EdgeInsets.all(0.0),
                   shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),
                   alignment: Alignment.topCenter,
                   gridDelegate: ResponsiveGridDelegate(
-                    mainAxisSpacing: 20.0,
-                    crossAxisSpacing: 20.0,
-                    maxCrossAxisExtent: ScreenHelper.isTablet(context) ||
-                            ScreenHelper.isMobile(context)
-                        ? constraints.maxWidth / 2.0
-                        : 250.0,
-                    childAspectRatio: ScreenHelper.isDesktop(context)
-                        ? 1
-                        : MediaQuery.of(context).size.aspectRatio * 1.5,
+                    maxCrossAxisExtent: constraints.maxWidth < 720.0
+                        ? constraints.maxWidth / 3.0
+                        : 100,
                   ),
                   itemBuilder: (BuildContext context, int index) {
                     return Container(
@@ -82,32 +105,9 @@ class CvSection extends StatelessWidget {
                             children: [
                               Image.asset(
                                 designProcesses[index].imagePath,
-                                width: 40.0,
                               ),
-                              SizedBox(
-                                width: 15.0,
-                              ),
-                              Text(
-                                designProcesses[index].title,
-                                style: GoogleFonts.oswald(
-                                  fontSize: 19.0,
-                                  fontWeight: FontWeight.w700,
-                                  color: Colors.white,
-                                ),
-                              )
                             ],
                           ),
-                          SizedBox(
-                            height: 15.0,
-                          ),
-                          Text(
-                            designProcesses[index].subtitle,
-                            style: TextStyle(
-                              color: kCaptionColor,
-                              height: 1.5,
-                              fontSize: 14.0,
-                            ),
-                          )
                         ],
                       ),
                     );

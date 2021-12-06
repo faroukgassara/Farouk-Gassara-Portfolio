@@ -7,20 +7,19 @@ import 'package:responsive_framework/responsive_framework.dart';
 
 final List<Education> educationList = [
   Education(
-    title: "Student - Computer Engineer",
-    description:
-        "ESPRIT - Ecole Sup Prive d’ingenierie et technologies - Ariana",
-    period: "2021 - PRESENT",
+    description: "Student - Computer Engineer",
+    linkName: "ESPRIT - Ecole Sup Prive d’ingenierie et technologies - Ariana",
+    period: "2020 - PRESENT",
   ),
   Education(
-    title: "Bachelor Degree",
-    description: "LyceeMajidaBoulila-Sfax",
-    period: "2013 - 2017",
-  ),
-  Education(
-    title: "Fundamental license in computer science and multimedia",
-    description: "ISAMM - Institut Superieur des Arts Multimedia de la Manouba",
+    description: "Fundamental license in computer science and multimedia",
+    linkName: "ISAMM - Institut Superieur des Arts Multimedia de la Manouba",
     period: "2017 - 2020",
+  ),
+  Education(
+    description: "Bachelor Degree",
+    linkName: "Lycee Majida Boulila-Sfax",
+    period: "2013 - 2017",
   ),
 ];
 
@@ -56,23 +55,6 @@ class EducationSection extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 5.0,
-            ),
-            Wrap(
-              children: [
-                Container(
-                  constraints: BoxConstraints(maxWidth: 400.0),
-                  child: Text(
-                    "A full stack all round developer that does all the job he needs to do at all times. Actually this is a false statement",
-                    style: TextStyle(
-                      color: Colors.white,
-                      height: 1.5,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
               height: 40.0,
             ),
             LayoutBuilder(
@@ -100,7 +82,16 @@ class EducationSection extends StatelessWidget {
                                   height: 5.0,
                                 ),
                                 Text(
-                                  education.title,
+                                  education.description,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 5.0,
+                                ),
+                                Text(
+                                  education.linkName,
                                   maxLines: 4,
                                   overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
@@ -109,17 +100,8 @@ class EducationSection extends StatelessWidget {
                                   ),
                                 ),
                                 SizedBox(
-                                  height: 5.0,
-                                ),
-                                Text(
-                                  education.description,
-                                  maxLines: 4,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(
-                                    color: kCaptionColor,
-                                    height: 1.5,
-                                  ),
-                                ),
+                                  height: 40.0,
+                                )
                               ],
                             ),
                           ),

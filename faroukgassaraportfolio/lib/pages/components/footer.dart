@@ -23,7 +23,7 @@ final List<FooterItem> footerItems = [
     iconPath: "assets/email1.png",
     title: "EMAIL",
     text1: "faroukgasaraa@gmail.com",
-    text2: "farouk.gassara@esprit.tn",
+    text2: "",
   ),
   FooterItem(
     iconPath: "assets/whatsapp.png",
@@ -57,6 +57,18 @@ Widget _buildUi(double width, BuildContext context) {
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Text(
+                "CONTACT",
+                style: GoogleFonts.oswald(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w900,
+                  fontSize: 28.0,
+                  height: 1.3,
+                ),
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 50.0),
                 child: Wrap(
@@ -81,7 +93,7 @@ Widget _buildUi(double width, BuildContext context) {
                                       width: 25.0,
                                     ),
                                     SizedBox(
-                                      width: 10.0,
+                                      width: 15.0,
                                     ),
                                     Text(
                                       footerItem.title,
@@ -94,7 +106,7 @@ Widget _buildUi(double width, BuildContext context) {
                                   ],
                                 ),
                                 SizedBox(
-                                  height: 10.0,
+                                  height: 15.0,
                                 ),
                                 RichText(
                                   textAlign: TextAlign.start,
@@ -104,14 +116,13 @@ Widget _buildUi(double width, BuildContext context) {
                                         text: "${footerItem.text1}\n",
                                         style: TextStyle(
                                           color: kCaptionColor,
-                                          fontSize: 13.0,
+                                          height: 1.5,
                                         ),
                                       ),
                                       TextSpan(
                                         text: "${footerItem.text2}\n",
                                         style: TextStyle(
                                           color: kCaptionColor,
-                                          fontSize: 13.0,
                                         ),
                                       )
                                     ],
@@ -139,50 +150,12 @@ Widget _buildUi(double width, BuildContext context) {
                   Padding(
                     padding: EdgeInsets.only(bottom: 8.0),
                     child: Text(
-                      "Copyright (c) 2021 Farouk Gassara. All Rights Reserved",
+                      "Copyright (c) 2021 Michele Harrington. All rights Reserved",
                       style: TextStyle(
                         color: kCaptionColor,
                       ),
                     ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      GestureDetector(
-                        onTap: () {},
-                        child: MouseRegion(
-                          cursor: SystemMouseCursors.click,
-                          child: Text(
-                            "",
-                            style: TextStyle(
-                              color: kCaptionColor,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Container(
-                        padding: EdgeInsets.symmetric(horizontal: 8.0),
-                        child: Text(
-                          "",
-                          style: TextStyle(
-                            color: kCaptionColor,
-                          ),
-                        ),
-                      ),
-                      GestureDetector(
-                        onTap: () {},
-                        child: MouseRegion(
-                          cursor: SystemMouseCursors.click,
-                          child: Text(
-                            "",
-                            style: TextStyle(
-                              color: kCaptionColor,
-                            ),
-                          ),
-                        ),
-                      )
-                    ],
-                  )
                 ],
               )
             ],

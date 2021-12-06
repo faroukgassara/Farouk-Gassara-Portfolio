@@ -1,5 +1,4 @@
 import 'package:faroukgassaraportfolio/models/header_item.dart';
-import 'package:faroukgassaraportfolio/pages/login.dart';
 import 'package:faroukgassaraportfolio/utils/constants.dart';
 import 'package:faroukgassaraportfolio/utils/globals.dart';
 import 'package:faroukgassaraportfolio/utils/screen_helper.dart';
@@ -10,20 +9,18 @@ import 'package:responsive_framework/responsive_framework.dart';
 import 'package:responsive_framework/responsive_value.dart';
 
 List<HeaderItem> headerItems = [
-  HeaderItem(
-    title: "HOME",
-    onTap: () {},
-  ),
   HeaderItem(title: "MY INTRO", onTap: () {}),
-  HeaderItem(title: "SERVICES", onTap: () {}),
-  HeaderItem(title: "PORTFOLIO", onTap: () {}),
-  HeaderItem(title: "TESTIMONIALS", onTap: () {}),
-  HeaderItem(title: "BLOGS", onTap: () {}),
-  HeaderItem(
-    title: "HIRE ME",
-    onTap: () {},
-    isButton: true,
-  ),
+  HeaderItem(title: "Cv Section", onTap: () {}),
+  HeaderItem(title: "Skills", onTap: () {}),
+  HeaderItem(title: "Tools", onTap: () {}),
+  HeaderItem(title: "Mobile App", onTap: () {}),
+  HeaderItem(title: "Web App", onTap: () {}),
+  HeaderItem(title: "Education Section", onTap: () {}),
+  HeaderItem(title: "Work Expericence", onTap: () {}),
+  HeaderItem(title: "Activities And Courses", onTap: () {}),
+  HeaderItem(title: "Languages", onTap: () {}),
+  HeaderItem(title: "Quotes", onTap: () {}),
+  HeaderItem(title: "Contact", onTap: () {}),
 ];
 
 class HeaderLogo extends StatelessWidget {
@@ -33,12 +30,6 @@ class HeaderLogo extends StatelessWidget {
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
         child: GestureDetector(
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => Login()),
-            );
-          },
           child: RichText(
             text: TextSpan(
               children: [
@@ -130,12 +121,9 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: ScreenHelper(
-        desktop: Padding(
-          padding: EdgeInsets.symmetric(vertical: 8.0),
-          child: buildHeader(),
-        ),
+        desktop: buildMobileHeader(),
         mobile: buildMobileHeader(),
-        tablet: buildHeader(),
+        tablet: buildMobileHeader(),
       ),
     );
   }

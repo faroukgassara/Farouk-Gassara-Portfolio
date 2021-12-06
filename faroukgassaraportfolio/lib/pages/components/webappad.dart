@@ -67,45 +67,6 @@ class WebAppAd extends StatelessWidget {
                             fontSize: 15.0,
                           ),
                         ),
-                        SizedBox(
-                          height: 25.0,
-                        ),
-                        Row(
-                          children: [
-                            MouseRegion(
-                              cursor: SystemMouseCursors.click,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  color: kPrimaryColor,
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
-                                height: 48.0,
-                                padding: EdgeInsets.symmetric(
-                                  horizontal: 28.0,
-                                ),
-                                child: TextButton(
-                                  onPressed: () {},
-                                  child: Center(
-                                    child: Text(
-                                      "EXPLORE MORE",
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 13.0,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              width: 10.0,
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 70.0,
-                        )
                       ],
                     ),
                   ),

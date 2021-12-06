@@ -7,24 +7,16 @@ import 'package:responsive_framework/responsive_framework.dart';
 
 List<Skill> skills = [
   Skill(
-    skill: "Dart",
-    percentage: 62,
+    skill: "Arabic",
+    percentage: 100,
   ),
   Skill(
-    skill: "Javascript",
-    percentage: 80,
+    skill: "English",
+    percentage: 75,
   ),
   Skill(
-    skill: "PHP",
-    percentage: 78,
-  ),
-  Skill(
-    skill: "Python",
-    percentage: 90,
-  ),
-  Skill(
-    skill: "GoLang",
-    percentage: 40,
+    skill: "French",
+    percentage: 50,
   ),
 ];
 
@@ -69,7 +61,7 @@ class SkillSection extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "SKILLS",
+                        "LANGUAGES",
                         style: GoogleFonts.oswald(
                           color: Colors.white,
                           fontWeight: FontWeight.w900,
@@ -78,7 +70,7 @@ class SkillSection extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 30.0,
+                        height: 10.0,
                       ),
                       Column(
                         children: skills
@@ -101,7 +93,6 @@ class SkillSection extends StatelessWidget {
                                       width: 10.0,
                                     ),
                                     Expanded(
-                                      // remaining (blank part)
                                       flex: 100 - skill.percentage,
                                       child: Divider(
                                         color: Colors.white,

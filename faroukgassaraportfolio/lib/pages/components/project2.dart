@@ -1,10 +1,18 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:faroukgassaraportfolio/utils/constants.dart';
 import 'package:faroukgassaraportfolio/utils/screen_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
-class MobileAppAd extends StatelessWidget {
+class ProjectPI extends StatefulWidget {
+  const ProjectPI({Key key}) : super(key: key);
+
+  @override
+  _ProjectPIState createState() => _ProjectPIState();
+}
+
+class _ProjectPIState extends State<ProjectPI> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -32,19 +40,12 @@ class MobileAppAd extends StatelessWidget {
                 children: [
                   Expanded(
                     flex: constraints.maxWidth > 720.0 ? 1 : 0,
-                    child: Image.asset(
-                      "assets/mobile.png",
-                      width: constraints.maxWidth > 720.0 ? null : 350.0,
-                    ),
-                  ),
-                  Expanded(
-                    flex: constraints.maxWidth > 720.0 ? 1 : 0,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Mobile Applications",
+                          "Development of a web application for technical and digital services (Skills assessment, Recruitment)",
                           style: GoogleFonts.oswald(
                             color: kCaptionColor,
                             fontWeight: FontWeight.w900,
@@ -52,31 +53,38 @@ class MobileAppAd extends StatelessWidget {
                           ),
                         ),
                         SizedBox(
-                          height: 15.0,
-                        ),
-                        Text(
-                          "CUSTOM MOBILE\nAPPLICATIONS",
-                          style: GoogleFonts.oswald(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w900,
-                            height: 1.3,
-                            fontSize: 35.0,
-                          ),
-                        ),
-                        SizedBox(
                           height: 10.0,
                         ),
                         Text(
-                          "Native or hybrid, for Android or IOS, a mobile application based on the latest technologies represent a real asset for your business. Different in its purpose from web applications, the mobile application is a base of your strategic development. With his scalable approach and thanks to its advanced functionalities, it presents a wildcard to develop your business, better understand and target your market.",
+                          "This project was developed as part of the summer internship project within PIXIMIND",
+                          style: GoogleFonts.oswald(
+                            color: kPrimaryColor,
+                            height: 2,
+                            fontSize: 15.0,
+                          ),
+                        ),
+                        Text(
+                          "I used Reactjs,Nestjs and MongoDb to develop this application.this project offers Among the advantages of online recruitment, and the overall digitization of the company, the different stages of recruitment are made easier. It is no longer rare to have a video phone interview. To select candidates, it is also possible to have them sit the exams online. Therefore, the candidate does not have to travel.",
                           style: TextStyle(
                             color: kCaptionColor,
                             height: 1.5,
-                            fontSize: 15.0,
+                            fontSize: 13.0,
                           ),
                         ),
                       ],
                     ),
-                  )
+                  ),
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  Expanded(
+                    flex: constraints.maxWidth > 720.0 ? 1 : 0,
+                    child: Image.asset(
+                      "assets/web.jpg",
+                      width: constraints.maxWidth > 720.0 ? null : 350.0,
+                      height: 400.0,
+                    ),
+                  ),
                 ],
               ),
             ),
